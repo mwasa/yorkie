@@ -28,6 +28,8 @@ func toOriginal(elem json.Element) json.Element {
 		return elem.Array
 	case *TextProxy:
 		return elem.Text
+	case *RichTextProxy:
+		return elem.RichText
 	case *json.Primitive:
 		return elem
 	}
